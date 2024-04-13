@@ -48,6 +48,16 @@ header {
   color: #ccc;
 }
 
+.map-icon {
+  display: flex;
+  align-items: center;
+}
+
+.map-icon .location {
+  margin-left: 10px; /* Adjust the margin as needed */
+  font-weight: 600;
+}
+
 .address .map-icon {
   display: flex;
   align-items: center;
@@ -107,14 +117,16 @@ header {
 
 .cart {
   display: flex;
+  align-items: center;
 }
 
-.cart .cart-icon {
-  font-size: 2.5rem
+.cart i {
+  font-size: 1.5rem;
+  margin-right: 100x;
 }
 
-.cart p {
-  margin-top: 20px;
+.cart-text {
+  font-size: 1rem;
   font-weight: 500;
 }
 

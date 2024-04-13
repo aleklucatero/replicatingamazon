@@ -4,10 +4,10 @@
           <a href="#"><img src="images/amazon_logo.png" alt="logo"></a>
         </div>
         <div class="address">
-          <a href="#" class="deliver">Deliver</a>
+          <a href="#" class="deliver">Deliver to Alek</a>
           <div class="map-icon">
-            <span class="material-symbols-outlined">location_on</span>
-            <a href="#" class="location">Nepal</a>
+            <i class="fas fa-map-marker-alt"></i>
+            <a href="#" class="location">Fullerton</a>
           </div>
         </div>
         <div class="nav-search">
@@ -18,11 +18,11 @@
           </select>
           <input type="text" placeholder="Search Amazon" class="search-input">
           <div class="search-icon">
-            <span class="material-symbols-outlined">search</span>
+            <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
         <div class="sign-in">
-         <a href="#"> <p>Hello, sign in</p>
+         <a href="#"> <p>Hello, Sign in</p>
           <span>Account &amp; Lists</span></a>
         </div>
         <div class="returns">
@@ -32,15 +32,16 @@
         <div class="cart">
           <a href="#">
             <span class="material-symbols-outlined cart-icon"></span>
-            </a>
+            <i class="fa-solid fa-cart-shopping"></i>
             <p>Cart</p>
+            </a>
         </div>
       </nav>
       
       <div class="banner">
         <div class="banner-content">
           <div class="panel">
-            <span class="material-symbols-outlined">menu</span>
+            <i class="fa-solid fa-bars"></i>
             <a href="#">All</a>
           </div>
   
