@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="sign-in">
-         <a href="#"> <p>Hello, Sign in</p>
+         <a href="/pages/signin.php"> <p>Hello, sign in</p>
           <span>Account &amp; Lists</span></a>
         </div>
         <div class="returns">
