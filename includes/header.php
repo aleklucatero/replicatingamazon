@@ -1,7 +1,7 @@
 <header>
       <nav class="navbar">
         <div class="nav-logo">
-          <a href="#"><img src="images/amazon_logo.png" alt="logo"></a>
+          <a href="#"><img src="/images/amazon_logo.png" alt="logo"></a>
         </div>
         <div class="address">
           <a href="#" class="deliver">Deliver to Alek</a>
