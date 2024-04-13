@@ -26,7 +26,7 @@
           <span>Account &amp; Lists</span></a>
         </div>
         <div class="returns">
-          <a href="#"><p>Returns</p>
+          <a href="/pages/orders.php"><p>Returns</p>
             <span>&amp; Orders</span></a>
         </div>
         <div class="cart">
