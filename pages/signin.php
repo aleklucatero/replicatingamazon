@@ -11,13 +11,15 @@
     <div class="signin-container">
         <h2>Sign In</h2>
         <form class="signin-form" action="signin.php" method="POST">
-            <label for="email" class="input-label">Email or mobile phone number</label>
-            <input type="text" name="username" placeholder="Username" required><br><br>
+            <label for="email" class="input-label">Enter email</label>
+            <input type="text" name="username" placeholder="Email" required><br><br>
             <input type="password" name="password" placeholder="Password" required><br><br>
             <button type="submit">Sign In</button>
         </form>
         <hr class="form-divider">
-        <button class="create-account-button">Create your Amazon account</button>
+        <a href="/pages/createaccount.php">
+            <button class="create-account-button">Create your Amazon account</button>
+        </a>
     </div>
 </body>
 </html>

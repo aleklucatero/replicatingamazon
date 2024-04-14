@@ -9,8 +9,12 @@
 </head>
 <body>
     <?php include '../includes/header.php'; ?>
+    
+    <section class="orders-content">
+        <div class="orders-title">Your Orders</div>
 
 
+    </section>
 
 </body>
 </html>
