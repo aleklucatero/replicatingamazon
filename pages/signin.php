@@ -1,10 +1,12 @@
+<link rel="stylesheet" href="/css/signin.css">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon Sign-In</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/signin.css">
 </head>
 <body>
     <a href="#"><img src="/images/amazon_logo2.png" alt="logo" class="signin-logo"></a>

@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+  }
+
+body, h2, form {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+  
+  .input-label {
+    font-size: 0.75rem; 
+    font-weight: 700;
+    color: #000000; 
+    display: block;
+    margin-bottom: 5px; 
+    padding-right: 190px;
+  }
+  
+  .password-input-label {
+    font-size: 0.75rem; 
+    color: #000000; 
+    display: block;
+    margin-bottom: 5px; 
+    padding-right: 190px;
+  }
+  
+  .create-account-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin-top: 620px;
+  }
+  
+  .create-account-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .create-account-form input[type="text"],
+  .create-account-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .create-account-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffd814;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5%;
+  }
+  
+  .create-account-form button:hover {
+    background-color: #dfbe1c;
+  }
+  
+  /*   Sign In Container   */
+.create-account-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin-top: 620px;
+  }
+  
+  .create-account-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .create-account-form input[type="text"],
+  .create-account-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .create-account-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffd814;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5%;
+  }
+  
+  /* Styles for orders.php */
+  .orders-title {
+    padding-top: 300px;
+    width: 920px;
+  }
+  
+  .signin-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  margin-top: 415px;
+}
+
+.signin-container h2 {
+  margin-bottom: 20px;
+}
+
+.signin-container img {
+  width: 120px; 
+  margin-bottom: 20px;
+}
+
+.signin-form input[type="text"],
+.signin-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.signin-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffd814;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signin-form button:hover {
+  background-color: #dfbe1c;
+}
+
+.signin-logo {
+  display: flex;
+  justify-content: center; 
+  position: absolute;
+  top: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 115px; 
+}
+
+.form-divider {
+  border: none;
+  border-top: 1px solid #ccc; 
+  margin: 20px 0; 
+}
+
+.create-account-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #000; 
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s; 
+}
+
+.create-account-button:hover {
+  background-color: #ccc; 
+  border-color: #888;
+}
+

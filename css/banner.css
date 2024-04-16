@@ -1,0 +1,77 @@
+/* Amazon Category's listed in a row */
+.banner {
+  /* Add padding to the banner */
+  padding: 10px 20px;
+  /* Set the background color of the banner */
+  background: #222f3d;
+  /* Set the text color of the banner */
+  color: #fff;
+  /* Set the font size of the banner */
+  font-size: 0.875rem;
+}
+
+/* Banner content styling */
+.banner-content {
+  /* Center the banner content horizontally */
+  margin: 0 auto;
+  /* Set the maximum width of the banner content */
+  max-width: 1280px;
+  /* Display the banner content as a flex container */
+  display: flex;
+  /* Align the items in the banner content vertically */
+  align-items: center;
+  /* Add space between the items in the banner content */
+  justify-content: space-between;
+}
+
+/* Panel styling */
+.panel {
+  /* Set the maximum width of the panel */
+  max-width: 1280px;
+  /* Display the panel as a flex container */
+  display: flex;
+  /* Align the items in the panel vertically */
+  align-items: center;
+  /* Add space between the items in the panel */
+  gap: 5px;
+  /* Add a cursor pointer to the panel */
+  cursor: pointer;
+}
+
+/* Panel span styling */
+.panel span {
+  /* Add margin to the right of the span */
+  margin-right: 7px;
+}
+
+/* Links styling */
+.links {
+  /* Display the links as a flex container */
+  display: flex;
+  /* Align the items in the links vertically */
+  align-items: center;
+  /* Remove the list style from the links */
+  list-style: none;
+  /* Add space between the links */
+  gap: 15px;
+  /* Allow the links to grow and fill the available space */
+  flex-grow: 1;
+  /* Add margin to the left of the links */
+  margin-left: 15px;
+}
+
+/* Links a styling */
+.links a {
+  /* Add padding to the top and bottom of the links */
+  padding: 10px 0;
+}
+
+/* Deals a styling */
+.deals a {
+  /* Set the font size of the deals links */
+  font-size: 0.9rem;
+  /* Set the font weight of the deals links */
+  font-weight: 500;
+  /* Prevent the deals links from wrapping to the next line */
+  white-space: nowrap;
+}

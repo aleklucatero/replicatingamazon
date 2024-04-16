@@ -1,0 +1,105 @@
+/* Footer title styling */
+.footer-title {
+  /* Display the footer title as a flex container */
+  display: flex;
+  /* Align the items in the footer title vertically */
+  align-items: center;
+  /* Center the footer title horizontally */
+  justify-content: center;
+  /* Set the background color of the footer title */
+  background-color: #37475a;
+  /* Set the text color of the footer title */
+  color: #fff;
+  /* Set the font size of the footer title */
+  font-size: 0.875rem;
+  /* Set the font weight of the footer title */
+  font-weight: 600;
+  /* Set the height of the footer title */
+  height: 60px;
+}
+
+/* Footer items styling */
+.footer-items {
+  /* Display the footer items as a flex container */
+  display: flex;
+  /* Distribute the footer items evenly along the horizontal axis */
+  justify-content: space-evenly;
+  /* Set the width of the footer items */
+  width: 100%;
+  /* Center the footer items horizontally */
+  margin: 0 auto;
+  /* Set the background color of the footer items */
+  background: #232f3e;
+}
+
+/* Footer items h4 styling */
+.footer-items h4 { 
+  /* Set the font size of the footer items h4 */
+  font-size: 1rem;
+  /* Set the font weight of the footer items h4 */
+  font-weight: 500;
+  /* Set the text color of the footer items h4 */
+  color: #fff;
+  /* Add margin to the top and bottom of the footer items h4 */
+  margin: 20px 0 10px 0;
+}
+
+/* Footer items ul styling */
+.footer-items ul {
+  /* Remove the list style from the footer items ul */
+  list-style: none;
+  /* Add margin to the bottom of the footer items ul */
+  margin-bottom: 20px;
+}
+
+/* Footer items li a styling */
+.footer-items li a {
+  /* Set the text color of the footer items li a */
+  color: #ddd;
+  /* Set the font size of the footer items li a */
+  font-size: 0.875rem;
+}
+
+/* Footer items li a hover styling */
+.footer-items li a:hover {
+  /* Add an underline to the footer items li a on hover */
+  text-decoration: underline;
+}
+
+/* Back to top button styling */
+.backtop{
+  /* Center the back to top button horizontally */
+  text-align: center;
+  /* Set the height of the back to top button */
+  height:50px;
+  /* Set the background color of the back to top button */
+  background-color: #37475a;
+  /* Add padding to the top and bottom of the back to top button */
+  padding:15px;
+  /* Add a cursor pointer to the back to top button */
+  cursor: pointer;
+}
+
+/* Back to top button span styling */
+.backtop span{
+  /* Set the text color of the back to top button span */
+  color:white;
+  /* Set the font weight of the back to top button span */
+  font-weight: bold;
+}
+
+/* Back to top button hover styling */
+.backtop:hover{
+  /* Set the background color of the back to top button on hover */
+  background-color: #4d627c;
+}
+
+/* Footer styling */
+.footer{
+  /* Set the width of the footer */
+  width:100%;
+  /* Set the height of the footer */
+  height:450px;
+  /* Add a transition effect to the footer */
+  transition: all 0.2s;
+}
