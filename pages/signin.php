@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/signin.css">
 </head>
 <body>
-    <a href="#"><img src="/images/amazon_logo2.png" alt="logo" class="signin-logo"></a>
+    <a href="../index.php"><img src="/images/amazon_logo2.png" alt="logo" class="signin-logo"></a>
     <div class="signin-container">
         <h2>Sign In</h2>
         <form class="signin-form" action="signin.php" method="POST">

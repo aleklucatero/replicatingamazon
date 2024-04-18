@@ -11,10 +11,10 @@ CREATE TABLE users (
 );
 
 #Examples of how to modify User's table
-INSERT INTO users (username, password, email) VALUES ('Lark', 'password', 'larkthelustrous@gmail.com');
-SELECT * FROM users;
-UPDATE users SET password = 'new_password' WHERE username = 'Lark';
-DELETE FROM users WHERE user_id = 1;
+-- INSERT INTO users (username, password, email) VALUES ('Lark', 'password', 'larkthelustrous@gmail.com');
+-- SELECT * FROM users;
+-- UPDATE users SET password = 'new_password' WHERE username = 'Lark';
+-- DELETE FROM users WHERE user_id = 1;
 
 CREATE TABLE products (
     product_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -57,3 +57,27 @@ CREATE TABLE product_categories (
 );
 
 
+-- Logic on PROCEDURES
+-- CREATE OR REPLACE PROCEDURE InsertEmployee (
+--     p_employee_id IN NUMBER,
+--     p_employee_name IN VARCHAR2,
+--     p_salsary IN NUMBER
+-- ) AS
+-- BEGIN
+--     INSERT INTO employees (emplyee_id, employee_name, salary)
+--     VALUE (p_employee_id, p_employee_name, p_salsary);
+
+--     COMMIT;
+--     DBMS_OUTPUT.PUT.LINE('Employee inserted successfully.');
+-- EXCEPTION
+--     WHEN OTHERS THEN
+--     ROLLBACK;
+--     DBMS_OUTPUT.PUT.LINE('Error inserting employee: ' || SQLERRM);
+
+-- END;
+-- /
+
+-- BEGIN
+--     InsertEmployee(105, 'Alek Lucatero', 100000);
+-- END;
+-- /
