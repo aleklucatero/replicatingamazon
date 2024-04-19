@@ -12,7 +12,7 @@
     <a href="#"><img src="/images/amazon_logo2.png" alt="logo" class="signin-logo"></a>
         <div class="create-account-container">
          <h2>Create account</h2>
-            <form class="create-account-form" action="createaccount.php" method="POST">
+            <form class="create-account-form" action="adddata.php" method="POST">
                 <label for="name" class="input-label">Your name</label>
                 <input type="text" name="name" placeholder="First and last name" required><br><br>
                 <label for="email" class="input-label">Your email</label>
