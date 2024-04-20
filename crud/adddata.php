@@ -16,7 +16,7 @@
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
             //Set SQL query into variable
-            $sql = "INSERT INTO users ('username', 'email', 'password') VALUES ('$username', '$email', '$hashed_password')";
+            $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
 
             //Execute the query returning boolean
             if (mysqli_query($conn, $sql)) {
