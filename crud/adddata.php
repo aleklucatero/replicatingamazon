@@ -21,7 +21,7 @@
             //Execute the query returning boolean
             if (mysqli_query($conn, $sql)) {
                 //if true, will redirect to index.php
-                header("location: index.php");
+                header("location: ../index.php");
                 exit();
             } else {
                 //Error handling

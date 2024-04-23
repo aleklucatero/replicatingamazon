@@ -3,10 +3,10 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$servername = "localhost";
+$servername = "localhost:8111";
 $username = "root";
 $password = "";
-$dbname = "amazon";
+$dbname = "amazon_database";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

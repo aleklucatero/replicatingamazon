@@ -21,7 +21,7 @@
                 <input type="password" name="password" placeholder="At least 6 characters" required><br><br>
                 <label for="password-confirmation" class="input-label" required>Re-enter</label>
                 <input type="password" name="password-confirmation" placeholder="Re-enter" required><br><br>
-                <button type="submit">Continue</button>
+                <button type="submit" name="submit">Continue</button>
             </form>
             <hr class="form-divider">
             <a href="/pages/signin.php">
