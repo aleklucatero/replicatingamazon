@@ -1,5 +1,6 @@
 <?php
     require_once "connect.php";
+    session_start();
 
     //Checks if form is submitted
     if(isset($_POST['submit'])) {
@@ -20,6 +21,8 @@
 
             //Execute the query returning boolean
             if (mysqli_query($conn, $sql)) {
+                //Set up session for newly registered user
+                $_SESSION['username'] = $username;
                 //if true, will redirect to index.php
                 header("location: ../index.php");
                 exit();
