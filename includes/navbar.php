@@ -18,7 +18,7 @@
         <a href="#" class="deliver">Delivering to</a>
         <div class="map-icon">
             <i class="fas fa-map-marker-alt"></i>
-            <a href="#" class="location">Update Location</a>
+            <a href="#" class="location"><?php echo isset($_SESSION['user_city']) ? $_SESSION['user_city'] : "Default City"; ?></a>
         </div>
     </div>
     <div class="nav-search">
@@ -34,7 +34,7 @@
     </div>
     <?php if ($logged_in) { ?>
     <div class="sign-in">
-        <a href="pages/signin.php">
+        <a href="pages/account_details.php">
             <p>Hello, <?php echo $_SESSION['username']; ?></p>
             <span>Account & Lists</span>
         </a>

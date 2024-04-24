@@ -3,7 +3,7 @@
     session_start();
 
     //Checks if form is submitted
-    if(isset($_POST['submit'])) {
+    if(isset($_POST['submitaccount'])) {
 
         //Retrieving form data
         $username = $_POST['username'];
@@ -17,14 +17,14 @@
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
             //Set SQL query into variable
-            $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
+            $sql_user = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
 
             //Execute the query returning boolean
-            if (mysqli_query($conn, $sql)) {
+            if (mysqli_query($conn, $sql_user)) {
                 //Set up session for newly registered user
                 $_SESSION['username'] = $username;
                 //if true, will redirect to index.php
-                header("location: ../index.php");
+                header("location: ../pages/address.php");
                 exit();
             } else {
                 //Error handling
