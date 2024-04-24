@@ -12,7 +12,7 @@
 
 <nav class="navbar">
     <div class="nav-logo">
-        <a href="#"><img src="images/amazon_logo.png" alt="Amazon Logo"></a>
+        <a href="../index.php"><img src="images/amazon_logo.png" alt="Amazon Logo"></a>
     </div>
     <div class="address">
         <a href="#" class="deliver">Delivering to</a>
@@ -40,7 +40,7 @@
         </a>
     </div>
     <div class="returns">
-        <a href="pages/signin.php">
+        <a href="pages/orders.php">
             <p>Returns</p>
             <span>& Orders</span>
         </a>

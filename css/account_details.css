@@ -1,0 +1,20 @@
+.account-actions {
+    text-align: center;
+    margin-top: 50px;
+}
+.account-action {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.account-action:hover {
+    background-color: #e0e0e0;
+}
+.account-action h3 {
+    margin-top: 20px;
+}

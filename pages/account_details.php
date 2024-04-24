@@ -7,19 +7,18 @@ CHANGE PASSWORD, AND DELETE ACCOUNT -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Account</title>
-    <link rel="stylesheet" href="css/navbar.css">  
-    <link rel="stylesheet" href="css/banner.css">  
+    <link rel="stylesheet" href="../css/navbar.css">  
+    <link rel="stylesheet" href="../css/banner.css">  
     <script src="https://kit.fontawesome.com/349ffd27ca.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <?php include '../includes/navbar.php'; ?>  
- 
+        <?php include '../includes/banner.php'; ?>  
     </header>  
 
-
-    <footer>
+    <!-- <footer>
         <?php include '../includes/footer.php'; ?> 
-    </footer>
+    </footer> -->
 </body>
 </html>
