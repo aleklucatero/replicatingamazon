@@ -17,8 +17,8 @@ body, h2, form {
     font-weight: 700;
     color: #000000; 
     display: block;
-    margin-bottom: 5px; 
-    padding-right: 190px;
+    margin: auto;
+    text-align: left;
   }
   
   .signin-container {
