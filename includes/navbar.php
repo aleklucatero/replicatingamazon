@@ -6,13 +6,18 @@
     session_start();
 
     //Checking if the user is logged in
-    $logged_in = isset($_SESSION['username']);
+    $username = $_SESSION['username'];
+    $logged_in = isset($username);
 ?>
 
 
 <nav class="navbar">
     <div class="nav-logo">
-        <a href="../index.php"><img src="images/amazon_logo.png" alt="Amazon Logo"></a>
+        <?php if (basename($_SERVER['PHP_SELF']) == 'index.php') { ?>
+            <a href="index.php"><img src="images/amazon_logo.png" alt="Amazon Logo"></li></a>
+        <?php } else { ?>
+            <a href="../index.php"><img src="../images/amazon_logo.png" alt="Amazon Logo"></li></a>
+        <?php } ?>
     </div>
     <div class="address">
         <a href="#" class="deliver">Delivering to</a>
@@ -60,10 +65,18 @@
     </div>
     <?php } ?>
     <div class="cart">
-        <a href="pages/cart.php">
+        <?php if (basename($_SERVER['PHP_SELF']) == 'index.php') { ?>
+            <a href="pages/cart.php">
             <span class="material-symbols-outlined cart-icon"></span>
             <i class="fa-solid fa-cart-shopping"></i>
             <p>Cart</p>
         </a>
+        <?php } else { ?>
+            <a href="../pages/cart.php">
+            <span class="material-symbols-outlined cart-icon"></span>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>Cart</p>
+        </a>
+        <?php } ?>
     </div>
 </nav>
