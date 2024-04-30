@@ -24,7 +24,7 @@
                 //Set up session for newly registered user
                 $_SESSION['username'] = $username;
                 //if true, will redirect to index.php
-                header("location: ../pages/address.php");
+                header("location: ../add_address.php");
                 exit();
             } else {
                 //Error handling
