@@ -24,7 +24,7 @@
                         <div>
                             <img src="images/microphone.jpg" alt="">
                         </div>
-                        <a href="#">Shop microphones and more</a>
+                        <a href="mic_ad.php">Shop microphones and more</a>
                     </div>
                     <div class="box box-c">
                         <h3>The latest in tech</h3>

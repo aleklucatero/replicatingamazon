@@ -109,6 +109,6 @@
     </div>
     </section>
 
-    <footer class="footer-cart">
+    <footer>
         <?php include '../includes/footer.php'; ?> 
     </footer>
