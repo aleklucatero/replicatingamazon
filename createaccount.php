@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../css/createaccount.css">
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon Registration</title>
-    <link rel="stylesheet" href="/css/createaccount.css">
+    <link rel="stylesheet" href="css/createaccount.css">
 </head>
 <body>
-    <a href="../index.php"><img src="../images/amazon_logo2.png" alt="logo" class="signin-logo"></a>
+    <a href="index.php"><img src="images/amazon_logo2.png" alt="logo" class="signin-logo"></a>
         <div class="create-account-container">
          <h2>Create account</h2>
             <form class="create-account-form" action="../crud/adddata.php" method="POST">
@@ -24,7 +23,7 @@
                 <button type="submit" name="submitaccount">Continue</button>
             </form>
             <hr class="form-divider">
-            <a href="../pages/signin.php">
+            <a href="signin.php">
             <button class="create-account-button">Already have an account?</button>
             </a>
      </div>

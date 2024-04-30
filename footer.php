@@ -1,9 +1,6 @@
 
-<?php if (basename($_SERVER['PHP_SELF']) == 'footer.php') { ?>
-    <link rel="stylesheet" href="css/footer.css">
-<?php } else { ?>
-    <link rel="stylesheet" href="../css/footer.css">
-<?php } ?>
+<link rel="stylesheet" href="css/footer.css">
+
 <footer class="footer">
     <!-- Back to Top Section -->
     <div class="backtop">

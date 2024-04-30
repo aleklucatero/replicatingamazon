@@ -13,11 +13,7 @@
 
 <nav class="navbar">
     <div class="nav-logo">
-        <?php if (basename($_SERVER['PHP_SELF']) == 'index.php') { ?>
-            <a href="index.php"><img src="images/amazon_logo.png" alt="Amazon Logo"></li></a>
-        <?php } else { ?>
-            <a href="../index.php"><img src="../images/amazon_logo.png" alt="Amazon Logo"></li></a>
-        <?php } ?>
+        <a href="index.php"><img src="images/amazon_logo.png" alt="Amazon Logo"></li></a>
     </div>
     <div class="address">
         <a href="#" class="deliver">Delivering to</a>
@@ -39,44 +35,36 @@
     </div>
     <?php if ($logged_in) { ?>
     <div class="sign-in">
-        <a href="pages/account_details.php">
+        <a href="account_details.php">
             <p>Hello, <?php echo $_SESSION['username']; ?></p>
             <span>Account & Lists</span>
         </a>
     </div>
     <div class="returns">
-        <a href="pages/orders.php">
+        <a href="orders.php">
             <p>Returns</p>
             <span>& Orders</span>
         </a>
     </div>
     <?php } else { ?>
         <div class="sign-in">
-        <a href="pages/signin.php">
+        <a href="signin.php">
             <p>Hello, sign in</p>
             <span>Account & Lists</span>
         </a>
     </div>
     <div class="returns">
-        <a href="pages/signin.php">
+        <a href="signin.php">
             <p>Returns</p>
             <span>& Orders</span>
         </a>
     </div>
     <?php } ?>
     <div class="cart">
-        <?php if (basename($_SERVER['PHP_SELF']) == 'index.php') { ?>
-            <a href="pages/cart.php">
+            <a href="cart.php">
             <span class="material-symbols-outlined cart-icon"></span>
             <i class="fa-solid fa-cart-shopping"></i>
             <p>Cart</p>
         </a>
-        <?php } else { ?>
-            <a href="../pages/cart.php">
-            <span class="material-symbols-outlined cart-icon"></span>
-            <i class="fa-solid fa-cart-shopping"></i>
-            <p>Cart</p>
-        </a>
-        <?php } ?>
     </div>
 </nav>

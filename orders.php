@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Orders</title>
-    <link rel="stylesheet" href="../css/orders.css">
-    <link rel="stylesheet" href="../css/banner.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="css/orders.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <header>
-        <?php include '../includes/navbar.php'; ?>  
-        <?php include '../includes/banner.php'; ?>
+        <?php include 'navbar.php'; ?>  
+        <?php include 'banner.php'; ?>
     </header>
     
     <div class="orders-container">
@@ -46,7 +46,7 @@
                 </div>
             <div class="order-body">
                 <div class="order-content">
-                    <img src="../images/macbook.jpg" alt="">
+                    <img src="images/macbook.jpg" alt="">
                     <div>
                         <p>Apple 2024 MacBook Air 15-inch Laptop with M3 chip: 15.3-inch Liquid Retina Display,
                              8GB Unified Memory, 256GB SSD Storage, Backlit Keyboard, 1080p FaceTime HD Camera, Touch ID; Silver</p>
@@ -69,7 +69,7 @@
     
 
     <footer class="footer-orders">
-        <?php include '../includes/footer.php'; ?> 
+        <?php include 'footer.php'; ?> 
     </footer>
 
     <script src="https://kit.fontawesome.com/349ffd27ca.js" crossorigin="anonymous"></script>  

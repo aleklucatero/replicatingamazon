@@ -10,20 +10,20 @@
 <body>
 <main>
     <header>
-        <?php include 'includes/navbar.php'; ?>  
-        <?php include 'includes/banner.php'; ?>  
+        <?php include 'navbar.php'; ?>  
+        <?php include 'banner.php'; ?>  
     </header>
 
     
         <section class="sec-1">
             <div class="slider">
-                <?php include 'pages/ad-section.php'; ?>
+                <?php include 'ad_section.php'; ?>
             </div>
         </section>
     </main>
 
     <footer>
-        <?php include 'includes/footer.php'; ?> 
+        <?php include 'footer.php'; ?> 
     </footer>
 
 </body>

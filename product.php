@@ -1,11 +1,9 @@
-<link rel="stylesheet" href="../css/cart.css">
-<link rel="stylesheet" href="../css/banner.css">
-<link rel="stylesheet" href="../css/navbar.css">
-<link rel="stylesheet" href="../css/product.css">
+<link rel="stylesheet" href="css/cart.css">
+<link rel="stylesheet" href="css/product.css">
 
     <header>
-        <?php include '../includes/navbar.php'; ?>  
-        <?php include '../includes/banner.php'; ?>
+        <?php include 'navbar.php'; ?>  
+        <?php include 'banner.php'; ?>
         <script src="https://kit.fontawesome.com/349ffd27ca.js" crossorigin="anonymous"></script>  
     </header>
 
@@ -23,7 +21,7 @@
                 <img src="../images/big_macbook.jpg" width="60" alt="">
             </div> -->
             <div class="product-main-image">
-                <img src="../images/big_macbook.jpg" width="400" alt="">
+                <img src="images/big_macbook.jpg" width="400" alt="">
             </div>
         </div>
         <div class="product-d-details">
@@ -37,7 +35,7 @@
             </p>
             <div class="product-rating">
                 <div>
-                    <div>4.3 <img src="../images/rating_img.png" height="20px" alt=""></div>
+                    <div>4.3 <img src="images/rating_img.png" height="20px" alt=""></div>
                     <p>40 ratings | Search this page</p>
                 </div>
                 <p><span>#1 Best Seller</span> in Traditional Laptop Computers by Apple</p>
@@ -116,7 +114,7 @@
         </div>
         <div class="product-d-purchase">
             <div class="title">
-                <h3>Buy new:</h3><img src="../images/circle_icon.png" width="20" alt="">
+                <h3>Buy new:</h3><img src="images/circle_icon.png" width="20" alt="">
             </div>
             <h1 class="price">$<span>1,249</span>99</h1>
             <div class="gap">
@@ -131,7 +129,7 @@
                 <p>Or fastest delivery <b>Tomorrow</b>, <b>January 23</b>. Order within <span>10 hrs 56 mins</span></p>
             </div> -->
             <div class="pincode-section">
-                <img src="../images/address_marker.png" width="20" alt="">
+                <img src="images/address_marker.png" width="20" alt="">
                 <p><span>Deliver to </span></p>
             </div>
             <h2 class="product-stock">In Stock</h2>
@@ -165,5 +163,5 @@
 
 
     <footer class="footer-cart">
-        <?php include '../includes/footer.php'; ?> 
+        <?php include 'footer.php'; ?> 
     </footer>

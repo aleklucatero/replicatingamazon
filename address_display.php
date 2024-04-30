@@ -8,11 +8,11 @@
     <script src="https://kit.fontawesome.com/349ffd27ca.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/css/banner.css">
-    <link rel="stylesheet" href="../css/displ_addr.css">
-    <?php include '../includes/navbar.php'; ?>
-    <?php include '../includes/banner.php'; ?>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/displ_addr.css">
+    <?php include 'navbar.php'; ?>
+    <?php include 'banner.php'; ?>
 
     <div class="address-box">
         <div class="box box-c">

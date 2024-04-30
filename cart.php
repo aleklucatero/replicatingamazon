@@ -1,10 +1,10 @@
-<link rel="stylesheet" href="../css/cart.css">
-<link rel="stylesheet" href="../css/banner.css">
-<link rel="stylesheet" href="../css/navbar.css">
+<link rel="stylesheet" href="css/cart.css">
+<link rel="stylesheet" href="css/banner.css">
+<link rel="stylesheet" href="css/navbar.css">
 
     <header>
-        <?php include '../includes/navbar.php'; ?>  
-        <?php include '../includes/banner.php'; ?>
+        <?php include 'navbar.php'; ?>  
+        <?php include 'banner.php'; ?>
         <script src="https://kit.fontawesome.com/349ffd27ca.js" crossorigin="anonymous"></script>  
     </header>
 
@@ -14,7 +14,7 @@
             <p class="price">Price</p>
             <hr>
             <div class="product-cart-list">
-                <img src="../images/macbook.jpg" width="180px" alt="">
+                <img src="images/macbook.jpg" width="180px" alt="">
                 <div>
                     <div class="product-cart-titleprice">
                         <p>Apple 2024 MacBook Air 15-inch Laptop with M3 chip: 15.3-inch Liquid Retina Display, 8GB Unified Memory, 
@@ -56,7 +56,7 @@
             </div>
             <hr>
             <div class="product-cart-list">
-                <img src="../images/airpods.jpg" width="180px" alt="">
+                <img src="images/airpods.jpg" width="180px" alt="">
                 <div>
                     <div class="product-cart-titleprice">
                         <p>Apple AirPods (3rd Generation) Wireless Ear Buds, Bluetooth Headphones, Personalized Spatial Audio, 
@@ -110,5 +110,5 @@
     </section>
 
     <footer>
-        <?php include '../includes/footer.php'; ?> 
+        <?php include 'footer.php'; ?> 
     </footer>
