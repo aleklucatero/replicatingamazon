@@ -61,16 +61,16 @@ CREATE TABLE IF NOT EXISTS product_categories (
 
 DELIMITER //
 
-CREATE PROCEDURE InsertEmployee (
-    IN p_employee_id INT,
-    IN p_employee_name VARCHAR(255),
-    IN p_salary DECIMAL(10, 2)
-)
-BEGIN
-    INSERT INTO employees (employee_id, employee_name, salary)
-    VALUES (p_employee_id, p_employee_name, p_salary);
+-- CREATE PROCEDURE InsertEmployee (
+--     IN p_employee_id INT,
+--     IN p_employee_name VARCHAR(255),
+--     IN p_salary DECIMAL(10, 2)
+-- )
+-- BEGIN
+--     INSERT INTO employees (employee_id, employee_name, salary)
+--     VALUES (p_employee_id, p_employee_name, p_salary);
 
-    SELECT 'Employee inserted successfully.' AS Message;
-END//
+--     SELECT 'Employee inserted successfully.' AS Message;
+-- END//
 
 DELIMITER ;

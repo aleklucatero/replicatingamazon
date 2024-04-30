@@ -11,7 +11,7 @@
     <a href="index.php"><img src="images/amazon_logo2.png" alt="logo" class="signin-logo"></a>
         <div class="create-account-container">
          <h2>Create account</h2>
-            <form class="create-account-form" action="../crud/adddata.php" method="POST">
+            <form class="create-account-form" action="crud/adddata.php" method="POST">
                 <label for="username" class="input-label">Username</label>
                 <input type="text" name="username" placeholder="Enter username" required><br><br>
                 <label for="email" class="input-label">Your Email</label>
