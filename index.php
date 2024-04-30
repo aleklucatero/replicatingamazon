@@ -17,7 +17,7 @@
     
         <section class="sec-1">
             <div class="slider">
-                <?php include 'pages/ad-section.php'; ?>  
+                <?php include 'pages/ad-section.php'; ?>
             </div>
         </section>
     </main>
