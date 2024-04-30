@@ -1,5 +1,166 @@
-header {
-    position: fixed;
-    width: 100%;
-    background-color: #0f1111;
-  }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.orders-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.tab-menu {
+  display: flex;
+}
+
+.tab-link {
+  padding: 20px;
+  cursor: pointer;
+  border: none; /* This removes the border */
+  background-color: transparent; /* This ensures no background color is applied */
+  border-bottom: 3px solid transparent; /* Invisible border to match height of active tab */
+  transition: border-color 0.2s; /* Smooth transition for the border */
+}
+
+.tab-link.active {
+  border-bottom: 2px solid #ff9900; /* Orange bottom border for the active/hover state */
+}
+
+.order-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.search-bar input {
+  padding: 3px 7px;
+  border: 1px solid #888C8C;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  padding: 4px;
+  background: #303333;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+
+.order-item {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid #ddd;
+
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.order-header span {
+  display: block;
+}
+
+.order-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-status {
+  flex-basis: 20%;
+  margin-right: 10px;
+}
+
+.order-content {
+  flex-grow: 1;
+  display: flex;
+}
+
+.order-content img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  background: #fff;
+}
+
+.order-content div {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-content p {
+  margin: 0;
+  padding: 2px 0;
+}
+
+.order-actions {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-actions button {
+  padding: 0px 0px;
+  margin: 5px 0;
+  background-color: #ffffff;
+  border: 1px solid #D5D9D9;
+  border-radius: 10px;
+  cursor: pointer;
+  vertical-align: middle;
+  border-radius: 3px;
+}
+
+.order-actions button:hover {
+  background-color: #D5D9D9;
+}
+
+.order-footer {
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.order-footer button {
+  background: none;
+  border: none;
+  color: #0066c0;
+  cursor: pointer;
+}
+
+.order-footer button:hover {
+  text-decoration: underline;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.order-footer span {
+  display: block;
+}

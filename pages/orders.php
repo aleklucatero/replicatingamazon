@@ -4,20 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Orders</title>
-    <link rel="stylesheet" href="/css/orders.css">
-    <script src="https://kit.fontawesome.com/349ffd27ca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/orders.css">
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
-    <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/css/banner.css">
+    <header>
+        <?php include '../includes/navbar.php'; ?>  
+        <?php include '../includes/banner.php'; ?>
+    </header>
     
-    <?php include '../includes/navbar.php'; ?>
-    <?php include '../includes/banner.php'; ?>
+    <div class="orders-container">
+        <p class="breadcrumb">
+            Your Account > Your Orders
+        </p>
+        <div class="order-filters">
+            <h1>Your Orders</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search all orders">
+                <button>Search Orders</button>
+            </div>
+        </div>
+        
+        <div class="tab-menu">
+            <button class="tab-link active">Orders</button>
+            <button class="tab-link">Cancelled Orders</button>
+            <!-- More tabs here -->
+        </div>
+
+        <div class="order-item">
+            <div class="order-header">
+                <span>ORDER PLACED <br> March 26, 2024</span>
+                <span>TOTAL <br> $1,351.86</span>
+                <span>SHIP TO <br> Account Name</span>
+                <span>ORDER # 111-1493458-0654656</span>
+            </div>
+            <div class="order-status">
+                    <strong>Delivered Mar 27, 2024</strong><br>
+                    Your package was left near the front door or porch.
+                </div>
+            <div class="order-body">
+                <div class="order-content">
+                    <img src="../images/macbook.jpg" alt="">
+                    <div>
+                        <p>Apple 2024 MacBook Air 15-inch Laptop with M3 chip: 15.3-inch Liquid Retina Display,
+                             8GB Unified Memory, 256GB SSD Storage, Backlit Keyboard, 1080p FaceTime HD Camera, Touch ID; Silver</p>
+                        <p>Return window closed on Apr 26, 2024</p>
+                        <button>Buy it again</button>
+                        <button>View your item</button>
+                    </div>
+                </div>
+                <div class="order-actions">
+                    <button>Track package</button>
+                    <button>Cancel Order</button>
+                </div>
+            </div>
+            <div class="order-footer">
+                <button>Archive order</button>
+            </div>
+        </div>
+        <!-- If you have more orders, repeat the .order-item div with its content for each order -->
+    </div>
     
-    <section class="orders-content">
-        <div class="orders-title">Your Orders</div>
 
-    </section>
+    <footer class="footer-orders">
+        <?php include '../includes/footer.php'; ?> 
+    </footer>
 
+    <script src="https://kit.fontawesome.com/349ffd27ca.js" crossorigin="anonymous"></script>  
 </body>
 </html>

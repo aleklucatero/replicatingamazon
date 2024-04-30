@@ -29,7 +29,7 @@
                     <div class="box box-c">
                         <h3>The latest in tech</h3>
                         <div>
-                            <img src="images/virtual-reality.jpg" alt="">
+                            <img src="images/latest_tech.jpg" alt="">
                         </div>
                         <a href="#">Shop new arrivals</a>
                     </div>
