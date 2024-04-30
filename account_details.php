@@ -28,7 +28,7 @@ CHANGE PASSWORD, AND DELETE ACCOUNT -->
             </div>
         </a>
 
-        <a href="#" target="_blank" class="box">
+        <a href="/login_details.php" target="_blank" class="box">
             <img src="images/security.png" alt="Security Icon">
             <div class="box-content">
                 <h3>Login & security</h3>
