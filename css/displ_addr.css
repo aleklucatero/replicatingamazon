@@ -1,0 +1,8 @@
+<style>
+.vl {
+  border-left: 6px solid green;
+  height: 500px;
+}
+</style>
+
+<div class="vl"></div> 
