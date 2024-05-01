@@ -20,7 +20,7 @@ CHANGE PASSWORD, AND DELETE ACCOUNT -->
 
     <!-- Start of the account-boxes container -->
         <div class="account-boxes">
-        <a href="#" target="_blank" class="box">
+        <a href="orders.php" target="_blank" class="box">
             <img src="images/orders.png" alt="Orders Icon">
             <div class="box-content">
                 <h3>Your Orders</h3>
@@ -44,29 +44,6 @@ CHANGE PASSWORD, AND DELETE ACCOUNT -->
             </div>
         </a>
 
-        <a href="#" target="_blank" class="box">
-            <img src="images/payment.png" alt="Payment Icon">
-            <div class="box-content">
-                <h3>Your Payments</h3>
-                <p>View all transactions, manage payment methods and settings</p>
-            </div>
-        </a>
-
-        <a href="#" target="_blank" class="box">
-            <img src="images/inbox.jpg" alt="Inbox Icon">
-            <div class="box-content">
-                <h3>Your Messages</h3>
-                <p>View or respond to messages from Amazon, Sellers and Buyers</p>
-            </div>
-        </a>
-
-        <a href="#" target="_blank" class="box">
-            <img src="images/manage.png" alt="Manage Icon">
-            <div class="box-content">
-                <h3>Manage your data</h3>
-                <p>Close Your Amazon Account</p>
-            </div>
-        </a>
     </div> <!-- End of the account-boxes container -->
 
     <footer>
