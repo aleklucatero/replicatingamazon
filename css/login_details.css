@@ -1,0 +1,54 @@
+.account-settings {
+    width: 50%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.edit-btn {
+    padding: 8px 60px;
+    background-color: #ffffff;
+    color: #0F1111;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); /* Add box-shadow */
+    outline: 1px solid #d2d2d2; /* Add outline */
+}
+
+.edit-btn:hover {
+    background-color: #dedede;
+}
+
+.submit-btn {
+    background-color: #5C67F2; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.submit-btn:hover {
+    background-color: #4a54e1;
+}

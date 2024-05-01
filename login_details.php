@@ -13,26 +13,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login & Security</title>
-    <link rel="stylesheet" href="css/createaccount.css">
+    <link rel="stylesheet" href="css/login_details.css">
 </head>
-<body>
-        <div class="create-account-container">
-         <h2>Edit Account</h2>
-            <form class="create-account-form" action="crud/adddata.php" method="POST">
-                <label for="username" class="input-label">Username</label>
-                <input type="text" name="username" placeholder="Enter username" required><br><br>
-                <label for="email" class="input-label">Your Email</label>
-                <input type="text" name="email" placeholder="Email" required><br><br>
-                <label for="password" class="input-label">Password</label>
-                <input type="password" name="password" placeholder="At least 6 characters" required><br><br>
-                <label for="password-confirmation" class="input-label" required>Re-enter</label>
-                <input type="password" name="password-confirmation" placeholder="Re-enter" required><br><br>
-                <button type="submit" name="submitaccount">Continue</button>
-            </form>
-            <hr class="form-divider">
-            <a href="signin.php">
-            <button class="create-account-button">Already have an account?</button>
-            </a>
-     </div>
+<div class="account-settings">
+        <h2>Login & Security</h2>
+        <form class="account-form" action="crud/adddata.php" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <div class="input-group">
+                    <input type="text" id="username" name="username" placeholder="Enter username" required>
+                    <button type="button" class="edit-btn">Edit</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                    <button type="button" class="edit-btn">Edit</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="At least 6 characters" required>
+                    <button type="button" class="edit-btn">Edit</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
