@@ -36,7 +36,7 @@ CHANGE PASSWORD, AND DELETE ACCOUNT -->
             </div>
         </a>
 
-        <a href="#" target="_blank" class="box">
+        <a href="/your_addresses.php" target="_blank" class="box">
             <img src="images/address.png" alt="Address Icon">
             <div class="box-content">
                 <h3>Your Addresses</h3>
