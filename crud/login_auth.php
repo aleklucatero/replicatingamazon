@@ -3,21 +3,23 @@
     session_start();
 
     //Checks if form is submitted
-    if(isset($_POST['submitaccount'])) {
+    if(isset($_POST['login'])) {
 
         //Retrieving form data
-        $username = $_POST['username'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+        $input_email = filter_input(INPUT_POST, "email",
+                                    FILTER_SANITIZE_EMAIL);
+        $input_password = filter_input(INPUT_POST, "password",
+                                        FILTER_SANITIZE_ENCODED)
 
         //Check if form fields arent empty
-        if($username != "" && $email != "" && $password != "") {
+        if($username != "" && $password != "") {
 
-            //Hashing password for security
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            //Hashing provided password for upcoming comp
+            $hashed_input_password = password_hash($input_password, PASSWORD_DEFAULT);
 
-            //Set SQL query into variable
-            $sql_user = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
+            //Retrieving data from database query
+            $sql_query = "SELECT password * FROM users WHERE ";
+            $hashed_password = 
 
             //Execute the query returning boolean
             if (mysqli_query($conn, $sql_user)) {

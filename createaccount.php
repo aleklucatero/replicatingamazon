@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +23,7 @@
             </form>
             <hr class="form-divider">
             <a href="signin.php">
-            <button class="create-account-button">Already have an account?</button>
+                <button class="create-account-button">Already have an account?</button>
             </a>
      </div>
 </body>
