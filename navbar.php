@@ -13,7 +13,7 @@
 
 <nav class="navbar">
     <div class="nav-logo">
-        <a href="index.php"><img src="images/amazon_logo.png" alt="Amazon Logo"></li></a>
+        <a href="index.php"><img src="/images/amazon_logo.png" alt="Amazon Logo"></a>
     </div>
     <div class="address">
         <a href="#" class="deliver">Delivering to</a>

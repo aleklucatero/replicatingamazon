@@ -24,8 +24,15 @@ CREATE TABLE IF NOT EXISTS products (
     image_link VARCHAR(255),
     description TEXT,
     price DECIMAL(10, 2) NOT NULL,
-    stock_quantity INT NOT NULL
+    stock_quantity INT NOT NULL,
+    category VARCHAR(255),
+    rating DECIMAL(3, 2),
+    brand VARCHAR(255),
+    status ENUM('active', 'inactive', 'discontinued') DEFAULT 'active',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
 
 CREATE TABLE IF NOT EXISTS orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
