@@ -19,7 +19,9 @@ if (isset($_POST['submit'])) {
         if ($stmt->execute()) {
             $last_inserted_id = $stmt->insert_id; // Get the last inserted ID
             echo "Product added successfully. Redirecting...";
-            header("Location: product_detail.php?id=$last_inserted_id"); // Redirect to the detail page
+            header("Location: index.php"); // Redirect to the detail page
+            // DEBUGGING PURPOSES
+            // header("Location: product_detail.php?id=$last_inserted_id"); // Redirect to the detail page
             exit(); // Ensure no further execution
         } else {
             echo "Error: " . $stmt->error;
