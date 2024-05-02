@@ -12,9 +12,24 @@
 
         //Check if form fields arent empty
         if($username != "" && $email != "" && $password != "") {
+            // Construct the SQL query for getting email if dupe
+            $e_query = "SELECT * FROM users WHERE email = '$email'";
 
-            //Hashing everything for user_id
-            // $user_id = hash()
+            // Execute the query
+            $email_result = mysqli_query($conn, $e_query);
+
+            if ($email_result) {
+                // Check if any rows were returned
+                if (mysqli_num_rows($email_result) > 0) {
+                    //Duplicate email
+                    echo "<script type='text/javascript'>
+                    alert('acount with email alreadt exists');
+                    window.location.href = '../createaccount.php';
+                    </script>;";
+                }
+            } else {
+                echo "Error: " . mysqli_error($conn);
+            }
             //Hashing password for security
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
@@ -30,7 +45,7 @@
                 $query = "SELECT user_id FROM users WHERE email = '$email'";
 
                 // Execute the query
-                $result = mysqli_query($connection, $query);
+                $result = mysqli_query($conn, $query);
 
                 if ($result) {
                     // Check if any rows were returned
@@ -46,7 +61,7 @@
                         </script>;";
                     }
                 } else {
-                    echo "Error: " . mysqli_error($connection);
+                    echo "Error: " . mysqli_error($conn);
                 }
                 $_SESSION["id"] = $user_id;
                 //if true, will redirect to index.php

@@ -1,6 +1,9 @@
 <?php
+    session_start();
     require_once "connect.php";
-
+    if (isset($_SESSION["id"])) {
+        $user_id = $_SESSION["id"];
+    }
     //Checks if form is submitted
     if(isset($_POST['submitaddress'])) {
 
@@ -9,13 +12,12 @@
         $city = $_POST['city'];
         $state = $_POST['state'];
         $zip = $_POST['zip'];
-        $user_id = $_SESSION["id"];
 
         //Check if form fields arent empty
         if ($street != "" && $city != "" && $state != "" && $zip != "") {
             
             //Set SQL query into variable
-            $sql_address = "INSERT INTO address (street, city, state, zip) VALUES ('$street', '$city', '$state', '$zip')";
+            $sql_address = "INSERT INTO address (street, city, state, zip, user_id) VALUES ('$street', '$city', '$state', '$zip', '$user_id')";
 
             //Execute query
             if (mysqli_query($conn, $sql_address)) {
