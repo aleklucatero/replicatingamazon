@@ -1,15 +1,22 @@
-<link rel="stylesheet" href="css/navbar.css">
-<link rel="stylesheet" href="css/banner.css">
-
 <?php
-    //Starting the session
-    session_start();
+session_start();
 
-    //Checking if the user is logged in
-    $username = $_SESSION['username'];
-    $logged_in = isset($username);
+// Function to destroy the session and redirect to index.php
+function logout() {
+    session_unset();
+    session_destroy();
+    header("Location: index.php");
+    exit;
+}
+
+// Check if the user is logged in
+$logged_in = isset($_SESSION['username']);
+
+// Check if the sign-out button is clicked
+if(isset($_POST["logout"])) {
+    logout();
+}
 ?>
-
 
 <nav class="navbar">
     <div class="nav-logo">
@@ -34,34 +41,38 @@
         </div>
     </div>
     <?php if ($logged_in) { ?>
-    <div class="sign-in">
-        <a href="account_details.php">
-            <p>Hello, <?php echo $_SESSION['username']; ?></p>
-            <span>Account & Lists</span>
-        </a>
-    </div>
-    <div class="returns">
-        <a href="orders.php">
-            <p>Returns</p>
-            <span>& Orders</span>
-        </a>
-    </div>
+        <div class="sign-in">
+            <a href="account_details.php">
+                <p>Hello, <?php echo $_SESSION['username']; ?></p>
+                <span>Account & Lists</span>
+            </a>
+            <!-- Add form for signing out -->
+            <form method="post" action="">
+                <button class="dropbtn" type="submit" name="logout">Sign out</button>
+            </form>
+        </div>
+        <div class="returns">
+            <a href="orders.php">
+                <p>Returns</p>
+                <span>& Orders</span>
+            </a>
+        </div>
     <?php } else { ?>
         <div class="sign-in">
-        <a href="signin.php">
-            <p>Hello, sign in</p>
-            <span>Account & Lists</span>
-        </a>
-    </div>
-    <div class="returns">
-        <a href="signin.php">
-            <p>Returns</p>
-            <span>& Orders</span>
-        </a>
-    </div>
+            <a href="signin.php">
+                <p>Hello, sign in</p>
+                <span>Account & Lists</span>
+            </a>
+        </div>
+        <div class="returns">
+            <a href="signin.php">
+                <p>Returns</p>
+                <span>& Orders</span>
+            </a>
+        </div>
     <?php } ?>
     <div class="cart">
-            <a href="cart.php">
+        <a href="cart.php">
             <span class="material-symbols-outlined cart-icon"></span>
             <i class="fa-solid fa-cart-shopping"></i>
             <p>Cart</p>
