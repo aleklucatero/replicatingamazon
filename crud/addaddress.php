@@ -1,6 +1,5 @@
 <?php
     require_once "connect.php";
-    session_start();
 
     //Checks if form is submitted
     if(isset($_POST['submitaddress'])) {
@@ -10,6 +9,7 @@
         $city = $_POST['city'];
         $state = $_POST['state'];
         $zip = $_POST['zip'];
+        $user_id = $_SESSION["id"];
 
         //Check if form fields arent empty
         if ($street != "" && $city != "" && $state != "" && $zip != "") {

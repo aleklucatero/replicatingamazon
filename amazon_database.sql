@@ -12,11 +12,12 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS address (
     address_id INT AUTO_INCREMENT PRIMARY KEY,
-    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    user_id INT NOT NULL,
     street VARCHAR(255),
     city VARCHAR(255),
     state VARCHAR(255),
-    zip VARCHAR(10)
+    zip VARCHAR(10),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
 

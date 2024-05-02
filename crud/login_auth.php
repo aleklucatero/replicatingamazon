@@ -52,11 +52,6 @@
                     //Store the result if successful
                     $valid_query->store_result();
                     //Check if email matches
-
-                    // echo "store result good";
-                    // echo "SQL Query: $sql_query<br>";
-                    // echo "Email to search: $input_email<br>";
-
                     if($valid_query->num_rows == 1) {
                         //Bind result
                         $valid_query->bind_result($id, $username, $hashed_pass);
