@@ -16,7 +16,6 @@ CREATE TABLE IF NOT EXISTS users (
     username VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(100) NOT NULL,
-<<<<<<< HEAD
     registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -28,11 +27,6 @@ CREATE TABLE IF NOT EXISTS address (
     state VARCHAR(255),
     zip VARCHAR(10),
     FOREIGN KEY (user_id) REFERENCES users(user_id)
-=======
-    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    address_id INT,
-    FOREIGN KEY (address_id) REFERENCES address(address_id)
->>>>>>> 1d15b27819af3fab24b64035fdbbeffd38ce1cda
 );
 
 
