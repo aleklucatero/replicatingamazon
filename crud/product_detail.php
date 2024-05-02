@@ -73,11 +73,14 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                         <img src="../images/address_marker.png" width="20" alt="">
                         <p><span>Deliver to </span></p>
                     </div>
-                    <h2 class="product-stock">In Stock</h2>
-                    <select class="product-quantity">
-                        <option value="1">Quantity: 1</option>
-                        <option value="2">Quantity: 2</option>
-                        <option value="3">Quantity: 3</option>
+                    <h2 class="product-stock"><?php echo $product['stock_quantity'] > 0 ? 'In Stock' : 'Out of Stock'; ?></h2>
+                    <select class="product-quantity" <?php echo $product['stock_quantity'] > 0 ? '' : 'disabled'; ?>>
+                        <?php
+                        // Generate options up to the available stock quantity
+                        for ($i = 1; $i <= $product['stock_quantity'] && $i <= 10; $i++) {
+                            echo "<option value='$i'>$i</option>";
+                        }
+                        ?>
                     </select>
                     <button class="btn">Add to Cart</button>
                     <button class="btn product-buy">Buy Now</button>
