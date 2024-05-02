@@ -12,11 +12,13 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS address (
     address_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255),
     street VARCHAR(255),
     city VARCHAR(255),
     state VARCHAR(255),
     zip VARCHAR(10)
 );
+
 
 CREATE TABLE IF NOT EXISTS products (
     product_id INT AUTO_INCREMENT PRIMARY KEY,

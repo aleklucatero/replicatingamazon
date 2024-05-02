@@ -1,5 +1,5 @@
 <?php
-require_once "connect.php"; // Make sure this points to your actual connection script
+require_once "crud/connect.php"; // Make sure this points to your actual connection script
 
 if (isset($_POST['submit'])) {
     // Retrieve form data

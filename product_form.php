@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="css/product_form.css">
 
-<form action="crud/add_product.php" method="post" enctype="multipart/form-data">
+<form action="add_product.php" method="post" enctype="multipart/form-data">
     <h2>Product Page Creator</h2>
 
     <label for="name">Product Name:</label>
