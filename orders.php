@@ -33,6 +33,12 @@
             <!-- More tabs here -->
         </div>
 
+        <?php
+            // Check if there are orders available
+            $orders_available = false; // Set to true if there are orders available, otherwise false
+            if ($orders_available) {
+                // Display orders
+        ?>
         <div class="order-item">
             <div class="order-header">
                 <span>ORDER PLACED <br> March 26, 2024</span>
@@ -64,9 +70,19 @@
                 <button>Archive order</button>
             </div>
         </div>
-        <!-- If you have more orders, repeat the .order-item div with its content for each order -->
+        <?php
+            } else {
+                // Display "No orders placed" message
+        ?>
+        <div class="order-item">
+            <div class="order-header">
+                <span>No orders placed</span>
+            </div>
+        </div>
+        <?php
+            }
+        ?>
     </div>
-    
 
     <footer class="footer-orders">
         <?php include 'footer.php'; ?> 
