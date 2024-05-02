@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +10,12 @@
     <a href="index.php"><img src="images/amazon_logo2.png" alt="Amazon logo" class="signin-logo"></a>
     <div class="signin-container">
         <h2>Sign In</h2>
-        <form class="signin-form" action="signin.php" method="POST">
+        <form class="signin-form" action="crud/login_auth.php" method="POST">
             <label for="email" class="input-label">Enter email</label>
-            <input type="text" name="username" placeholder="Email" required><br><br>
+            <input type="text" name="email" placeholder="Email" required><br><br>
             <label for="password" class="input-label">Password</label>
             <input type="password" name="password" placeholder="Password" required><br><br>
-            <button type="submit">Sign In</button>
+            <button type="submit" name="login" >Sign In</button>
         </form>
         <hr class="form-divider">
         <a href="createaccount.php">
