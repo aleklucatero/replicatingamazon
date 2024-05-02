@@ -7,7 +7,7 @@
             <a href="#">All</a>
         </div>
         <ul class="links">
-            <li><a href="#">Medical Care</a></li>
+            <li><a href="product_form.php">Sell on Amazon</a></li>
             <li><a href="#">Groceries</a></li>
             <li><a href="#">Best Sellers</a></li>
             <li><a href="#">Amazon Basics</a></li>
