@@ -23,7 +23,7 @@
             if (mysqli_query($conn, $sql_user)) {
                 //Set up session for newly registered user
                 $_SESSION['username'] = $username;
-                //if true, will redirect to add_address.php to link address to user
+                //if true, will redirect to index.php
                 header("location: ../add_address.php");
                 exit();
             } else {
