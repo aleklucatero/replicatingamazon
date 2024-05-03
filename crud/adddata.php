@@ -128,3 +128,73 @@ if(isset($_POST['updateaccount'])) {
         exit();
     }
 }
+
+
+// Check if form is submitted for updating address
+if(isset($_POST['updateaddress'])) {
+    // Retrieving form data
+    $user_id = $_SESSION['id']; // Assuming you have stored user_id in session
+    $street = $_POST['street'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+    $zip = $_POST['zip'];
+
+    // Check if form fields aren't empty
+    if($user_id != "" && ($street != "" || $city != "" || $state != "" || $zip != "")) {
+        $update_query_address = "UPDATE address SET";
+
+        // Add fields to update if provided
+        $params = array();
+        $types = "";
+        if ($street != "") {
+            $update_query_address .= " street = ?,";
+            $params[] = $street;
+            $types .= "s";
+        }
+        if ($city != "") {
+            $update_query_address .= " city = ?,";
+            $params[] = $city;
+            $types .= "s";
+        }
+        if ($state != "") {
+            $update_query_address .= " state = ?,";
+            $params[] = $state;
+            $types .= "s";
+        }
+        if ($zip != "") {
+            $update_query_address .= " zip = ?,";
+            $params[] = $zip;
+            $types .= "s";
+        }
+
+        // Remove trailing comma
+        $update_query_address = rtrim($update_query_address, ',');
+
+        // Add condition for specific user
+        $update_query_address .= " WHERE user_id = ?";
+        $params[] = $user_id;
+        $types .= "i";
+
+        // Prepare and execute the update query
+        $stmt = mysqli_prepare($conn, $update_query_address);
+        mysqli_stmt_bind_param($stmt, $types, ...$params);
+
+        if (mysqli_stmt_execute($stmt)) {
+            // Update the session variable with the new username
+            $_SESSION['user_city'] = $city;
+
+            echo "<script type='text/javascript'>
+            alert('Address updated successfully');
+            window.location.href = '../index.php';
+            </script>";
+            exit();
+        } else {
+            echo "Error: " . mysqli_error($conn);
+            exit();
+        }
+    } else {
+        // Error handling if inputs are empty
+        echo "Address, City, State, and Zip-Code cannot be empty";
+        exit();
+    }
+}

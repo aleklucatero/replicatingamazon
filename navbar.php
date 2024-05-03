@@ -5,6 +5,22 @@ session_start();
 $logged_in = isset($_SESSION['username']);
 
 // Check if the sign-out button is clicked
+if (!isset($_SESSION['user_city']) && $logged_in) {
+    // Query the user's city from the database based on their user ID and set the session variable
+    require_once "crud/connect.php"; // Include your database connection file
+    $user_id = $_SESSION['id'];
+    $query = "SELECT city FROM address WHERE user_id = $user_id";
+    $result = mysqli_query($conn, $query);
+    if ($result) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['user_city'] = $row['city'];
+    } else {
+        // Handle database error
+        $_SESSION['user_city'] = "Default City";
+    }
+}
+
+// Check if the sign-out button is clicked
 if(isset($_POST["logout"])) {
     echo '<script>
             var confirmLogout = confirm("Are you sure you want to log out?");
