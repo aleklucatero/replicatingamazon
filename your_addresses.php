@@ -22,28 +22,28 @@
                 <label for="Address">Address</label>
                 <div class="input-group">
                     <input type="text" id="Address" name="Address" placeholder="Enter Address" required>
-                    <button type="button" class="edit-btn">Edit</button>
+                    <button type="button" class="edit-btn">Update</button>
                 </div>
             </div>
             <div class="form-group">
                 <label for="City">City</label>
                 <div class="input-group">
                     <input type="text" id="City" name="City" placeholder="Enter City" required>
-                    <button type="button" class="edit-btn">Edit</button>
+                    <button type="button" class="edit-btn">Update</button>
                 </div>
             </div>
             <div class="form-group">
                 <label for="State">State</label>
                 <div class="input-group">
                     <input type="text" id="State" name="State" placeholder="Enter State" required>
-                    <button type="button" class="edit-btn">Edit</button>
+                    <button type="button" class="edit-btn">Update</button>
                 </div>
             </div>
             <div class="form-group">
                 <label for="Zip-Code">Zip-Code</label>
                 <div class="input-group">
                     <input type="text" id="Zip-Code" name="Zip-Code" placeholder="Enter Zip-code" required>
-                    <button type="button" class="edit-btn">Edit</button>
+                    <button type="button" class="edit-btn">Update</button>
                 </div>
             </div>
         </form>

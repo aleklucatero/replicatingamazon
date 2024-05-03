@@ -22,21 +22,21 @@
                 <label for="username">Username</label>
                 <div class="input-group">
                     <input type="text" id="username" name="username" placeholder="Enter username" required>
-                    <button type="button" class="edit-btn">Edit</button>
+                    <button type="button" class="edit-btn">Update</button>
                 </div>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <div class="input-group">
                     <input type="email" id="email" name="email" placeholder="Enter Email" required>
-                    <button type="button" class="edit-btn">Edit</button>
+                    <button type="button" class="edit-btn">Update</button>
                 </div>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <div class="input-group">
                     <input type="password" id="password" name="password" placeholder="At least 6 characters" required>
-                    <button type="button" class="edit-btn">Edit</button>
+                    <button type="button" class="edit-btn">Update</button>
                 </div>
             </div>
         </form>
