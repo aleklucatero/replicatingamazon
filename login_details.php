@@ -58,6 +58,12 @@
             <!-- Single submit button for the entire form -->
             <button type="submit" class="edit-btn" name="updateaccount">Update</button>
         </form>
+
+        <form class="delete-form" action="crud/delete_account.php" method="POST">
+        <!-- Hidden input field for user ID -->
+        <input type="hidden" name="user_id" value="<?php echo $_SESSION['id']; ?>">
+        <button type="submit" class="delete-btn" name="deleteaccount">Delete Account</button>
+    </form>
     </div>
 </body>
 </html>
