@@ -17,6 +17,7 @@
 
     <main class="shopping-cart main-background-color page-container">
         <?php
+        require_once "crud/connect.php";
             // Check if the cart is empty
             $cart_empty = true; // Set to false if there are items in the cart
 
@@ -30,9 +31,36 @@
                 </div>
         <?php
             } else {
-                // Display cart contents
-                //Redirect to fetch all cart contents
-                header("location: crud/grabcart.php");
+                // Fetch cart items with product details
+            $stmt = $conn->prepare("SELECT cart.cart_id, cart.quantity, products.name, products.image_link, products.description, products.brand, products.price 
+            FROM cart 
+            INNER JOIN products ON cart.product_id = products.product_id 
+            WHERE cart.user_id = ?");
+            $stmt->bind_param("i", $user_id);
+            $stmt->execute();
+            $stmt->store_result();
+            $stmt->bind_result($cart_id, $quantity, $name, $image_link, $description, $brand, $price);
+            
+            $cart_items = [];
+            $total_price = 0;
+            
+            while ($stmt->fetch()) {
+                $cart_items[] = [
+                    'cart_id' => $cart_id,
+                    'quantity' => $quantity,
+                    'name' => $name,
+                    'image_link' => $image_link,
+                    'description' => $description,
+                    'brand' => $brand,
+                    'price' => $price
+                ];
+                $total_price += $price * $quantity;
+            }
+            
+            $stmt->close();
+            $conn->close();
+            ?>
+?>
         ?>
         <div class="cart-left">
             <h1>Shopping Cart</h1>
@@ -40,48 +68,48 @@
             <hr>
             <div class="product-cart-list">
                 <!-- Cart items content goes here -->
-                <div class="product-cart-item">
-                    <img src="images/macbook.jpg" width="180px" alt="">
-                    <div>
-                        <div class="product-cart-titleprice">
-                            <p>
-                                <!-- Apple 2024 MacBook Air 15-inch Laptop with M3 chip: 15.3-inch Liquid Retina Display, 8GB Unified Memory,  -->
-                                <!-- 256GB SSD Storage, Backlit Keyboard, 1080p FaceTime HD Camera, Touch ID; Silver -->
-                            </p>
-                            <p><b>$1,249.99</b></p>
-                        </div>
-                        <p class="product-cart-bestseller"><span>#1 Best Seller</span></p>
-                        <p class="product-cart-stock">In Stock</p>
-                        <p class="product-cart-delivery">FREE delivery <b>Sat, May 4</b> available at checkout
-                        <p class="product-cart-returns">FREE Returns &#11191</p>
-                        <p class="product-cart-giftoption">Gift options not available. 
-                        <a class="small_link" href="index.php">Learn more</a></p>
-                        <div class="product-cart-specs">
-                        </div>
-                        <div class="product-cart-list-action">
-                            <select>
-                                <option value="Qty: 1">Qty: 1</option>
-                                <option value="Qty: 2">Qty: 2</option>
-                                <option value="Qty: 3">Qty: 3</option>
-                                <option value="Qty: 4">Qty: 4</option>
-                                <option value="Qty: 5">Qty: 5</option>
-                            </select>
-                            <hr>
-                            <p class="action-btn">Delete</p>
-                            <hr>
-                            <p class="action-btn">Save for later</p>
-                            <hr>
-                            <p class="action-btn">Compare with similar items</p>
-                            <hr>
-                            <p class="action-btn">Share</p>
+                <?php
+                foreach($cart_items as $item) { ?>
+                    <div class="product-cart-item">
+                        <img src="<?php echo $item['image_link']; ?>" width="180px" alt="">
+                        <div>
+                            <div class="product-cart-titleprice">
+                                <p><?php echo $item['description']; ?></p>
+                                <p><b><?php echo $item['price']; ?></b></p>
+                            </div>
+                            <p class="product-cart-bestseller"><span>#1 Best Seller</span></p>
+                            <p class="product-cart-stock">In Stock</p>
+                            <p class="product-cart-delivery">FREE delivery <b>Sat, May 4</b> available at checkout
+                            <p class="product-cart-returns">FREE Returns &#11191</p>
+                            <p class="product-cart-giftoption">Gift options not available. 
+                            <a class="small_link" href="index.php">Learn more</a></p>
+                            <div class="product-cart-specs">
+                            </div>
+                            <div class="product-cart-list-action">
+                                <select>
+                                    <option value="Qty: 1">Qty: 1</option>
+                                    <option value="Qty: 2">Qty: 2</option>
+                                    <option value="Qty: 3">Qty: 3</option>
+                                    <option value="Qty: 4">Qty: 4</option>
+                                    <option value="Qty: 5">Qty: 5</option>
+                                </select>
+                                <hr>
+                                <p class="action-btn">Delete</p>
+                                <hr>
+                                <p class="action-btn">Save for later</p>
+                                <hr>
+                                <p class="action-btn">Compare with similar items</p>
+                                <hr>
+                                <p class="action-btn">Share</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Repeat this block for each item in the cart -->
+            <?php } ?>
+                
             </div>
             <hr>
             <div class="cart-list-subtotal">
-                Subtotal (1 items): <b>$1,249.99</b>
+                Subtotal (<?php echo count($cart_items); ?> items): <b>$<?php echo number_format($total_price, 2); ?></b>
             </div>
         </div>
         <div class="cart-right">
