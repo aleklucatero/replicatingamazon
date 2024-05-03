@@ -66,12 +66,12 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                     </div>
                     <h1 class="price">$<span><?php echo number_format(htmlspecialchars($product['price']), 2); ?></span></h1>
                     <div class="gap">
-                        <p><span>FREE delivery</span> <b>Tomorrow, May 1</b>.</p>
+                        <p><span>FREE delivery</span> <b><?php echo date('F j', strtotime('+2 days'));?></b>.</p>
                         <p>Order within 10 hrs 49 mins</p>
                     </div>
                     <div class="pincode-section">
-                        <img src="images/address_marker.png" width="20" alt="">
-                        <p><span>Deliver to </span></p>
+                        <!-- <img src="images/address_marker.png" width="20" alt="">
+                        <p><span>Deliver to </span></p> -->
                     </div>
                     <h2 class="product-stock"><?php echo $product['stock_quantity'] > 0 ? 'In Stock' : 'Out of Stock'; ?></h2>
                     <select class="product-quantity" <?php echo $product['stock_quantity'] > 0 ? '' : 'disabled'; ?>>
@@ -93,12 +93,12 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                     <form action="crud/process_order.php" method="post">
                         <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product['product_id']); ?>">
                         <input type="hidden" name="price" value="<?php echo htmlspecialchars($product['price']); ?>">
-                        <select name="quantity" class="product-quantity" <?php echo $product['stock_quantity'] > 0 ? '' : 'disabled'; ?>>
+                        <!-- <select name="quantity" class="product-quantity" <?php echo $product['stock_quantity'] > 0 ? '' : 'disabled'; ?>>
                             <?php
                             for ($i = 1; $i <= $product['stock_quantity'] && $i <= 10; $i++) {
                                 echo "<option value='$i'>$i</option>";
                             }
-                            ?>
+                            ?> -->
                         </select>
                         <button type="submit" name="buy_now" class="btn product-buy">Buy Now</button>
                     </form>
