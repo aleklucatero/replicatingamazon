@@ -56,8 +56,13 @@ h1 {
   border: none;
   border-radius: 15px;
   cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
 }
 
+.search-bar button:hover {
+  background: #000000;
+}
 
 .order-item {
   background: #ffffff;
