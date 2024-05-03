@@ -82,7 +82,18 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                         }
                         ?>
                     </select>
-                    <button class="btn">Add to Cart</button>
+                    <form action="crud/add_to_cart.php" method="post">
+                        <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product['product_id']); ?>">
+                        <input type="hidden" name="price" value="<?php echo htmlspecialchars($product['price']); ?>">
+                        <select name="quantity" class="product-quantity" <?php echo $product['stock_quantity'] > 0 ? '' : 'disabled'; ?>>
+                            <?php
+                            for ($i = 1; $i <= $product['stock_quantity'] && $i <= 10; $i++) {
+                                echo "<option value='$i'>$i</option>";
+                            }
+                            ?>
+                        </select>
+                        <button class="btn">Add to Cart</button>
+                    
                     <form action="crud/process_order.php" method="post">
                         <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product['product_id']); ?>">
                         <input type="hidden" name="price" value="<?php echo htmlspecialchars($product['price']); ?>">
@@ -119,11 +130,18 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         </html>
         <?php
     } else {
-        echo "Product not found.";
+        echo "<script type='text/javascript'>
+            alert('Product ID not found');
+            window.location.href = 'index.php';
+            </script>";
     }
     $stmt->close();
 } else {
-    echo "Invalid product ID.";
+    echo "<script type='text/javascript'>
+        alert('Invalid product ID');
+        window.location.href = 'index.php';
+        </script>";
 }
 $conn->close();
+exit;
 ?>

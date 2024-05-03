@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS address (
     city VARCHAR(255),
     state VARCHAR(255),
     zip VARCHAR(10),
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
 
