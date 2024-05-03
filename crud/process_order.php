@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['buy_now'])) {
 
             echo "Order processed successfully.";
             // Redirect to order details or confirmation page
-            header("Location: orders.php");
+            header("Location: ../orders.php");
             exit();
         } else {
             echo "Not enough stock available.";
