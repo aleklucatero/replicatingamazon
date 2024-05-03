@@ -15,7 +15,7 @@
         <script src="https://kit.fontawesome.com/349ffd27ca.js" crossorigin="anonymous"></script>  
     </header>
 
-    <div class="shopping-cart main-background-color page-container">
+    <main class="shopping-cart main-background-color page-container">
         <?php
             // Check if the cart is empty
             $cart_empty = true; // Set to false if there are items in the cart
@@ -97,7 +97,7 @@
             }
         ?>
     </div>
-
+    </main>
     <footer>
         <?php include 'footer.php'; ?> 
     </footer>

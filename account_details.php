@@ -19,7 +19,7 @@ CHANGE PASSWORD, AND DELETE ACCOUNT -->
     </header>  
 
     <!-- Start of the account-boxes container -->
-        <div class="account-boxes">
+    <main class="account-boxes">
         <a href="orders.php" target="_blank" class="box">
             <img src="images/orders.png" alt="Orders Icon">
             <div class="box-content">
@@ -43,9 +43,7 @@ CHANGE PASSWORD, AND DELETE ACCOUNT -->
                 <p>Edit, remove or set default address</p>
             </div>
         </a>
-
-    </div> <!-- End of the account-boxes container -->
-
+    </main>
     <footer>
         <?php include 'footer.php'; ?> 
     </footer>

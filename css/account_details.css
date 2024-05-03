@@ -1,14 +1,16 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
 
-.account-boxes {
+main.account-boxes {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: 20px;
-    margin: 0 auto; 
+    margin: 20px auto 0; 
     gap: 20px;
     max-width: 1200px; 
 }
@@ -16,29 +18,25 @@ body {
 .box {
     background: #ffffff;
     border: 1px solid #ddd;
-    border-radius: 10px; 
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    overflow: hidden; 
-    width: 100%; 
-    max-width: 370px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 370px; 
     margin: auto; 
 }
 
-.box:hover {
-    background-color: #dfe0e0b7;
-  }
-
 .box img {
-    width: auto; 
+    width: auto;
     height: 66.27px; 
-    flex-shrink: 0; 
-    margin: 20px; 
+    flex-shrink: 0;
+    margin: 20px;
 }
 
 .box-content {
-    flex-grow: 1; 
-    padding: 20px 20px 20px 0; 
+    flex-grow: 1;
+    padding: 20px 20px 20px 0;
 }
 
 .box h3 {
@@ -51,4 +49,14 @@ body {
     font-size: 0.9em;
     color: #666;
     margin: 0;
+}
+
+.box:hover {
+    background-color: #dfe0e0b7;
+  }
+
+footer {
+    flex-shrink: 0; 
+    width: 100%; 
+    margin-top: auto;
 }

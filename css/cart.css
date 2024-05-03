@@ -1,7 +1,9 @@
-.shopping-cart {
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     display: flex;
-    gap: 20px;
-    margin: 20px;
+    flex-direction: column;
+    min-height: 100vh; 
 }
 
 .cart-left {
@@ -109,6 +111,7 @@
     display: flex;
     font-size: 11px;
 }
+
 .cart-subtotal{
     margin-top: 20px;
     font-size: 17px;
@@ -141,13 +144,13 @@
     font-size: 14px;
 }   
 .textbox_center {
-    margin-top: auto;
-    margin-bottom: auto;
     margin-left: 2px;
     margin-right: 35%;
     width: 80%;
     background-color: white;
     padding-left: 10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 .text_center {
     text-align: center;
@@ -158,10 +161,10 @@
 }
 
 .page-container {
-    min-width: 998px;
-    padding: 14px 18px 18px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
+
 .small_text {
     text-align: left;
     font-weight: 400;
@@ -178,4 +181,9 @@
     font-size: 14px;
     margin-top: 10px;
     color: rgb(50, 144, 181);
+}
+footer {
+    flex-shrink: 0; 
+    width: 100%; 
+    margin-top: auto;
 }

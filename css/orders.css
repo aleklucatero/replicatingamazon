@@ -1,8 +1,9 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
 }
 
 .orders-container {
@@ -163,4 +164,11 @@ h1 {
 
 .order-footer span {
   display: block;
+}
+
+
+footer {
+  flex-shrink: 0; 
+  width: 100%; 
+  margin-top: auto;
 }

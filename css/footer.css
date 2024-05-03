@@ -95,12 +95,8 @@
   background-color: #4d627c;
 }
 
-/* Footer styling */
-.footer{
-  /* Set the width of the footer */
-  width:100%;
-  /* Set the height of the footer */
-  height:450px;
-  /* Add a transition effect to the footer */
-  transition: all 0.2s;
+footer {
+  flex-shrink: 0; /* Prevents the footer from growing */
+  width: 100%; 
+  margin-top: auto; /* Pushes the footer to the bottom */
 }
