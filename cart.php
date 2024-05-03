@@ -15,7 +15,7 @@
         <script src="https://kit.fontawesome.com/349ffd27ca.js" crossorigin="anonymous"></script>  
     </header>
 
-    <div class="shopping-cart">
+    <div class="shopping-cart main-background-color page-container">
         <?php
             // Check if the cart is empty
             $cart_empty = true; // Set to false if there are items in the cart
@@ -23,7 +23,11 @@
             if ($cart_empty) {
                 // Display "Shopping Cart is empty"
         ?>
-        <h1>Shopping Cart is empty</h1>
+        <div class="textbox_center">
+            <h2>Your Amazon Cart is empty</h2><br>
+            <p class="small_text">Your Shopping Cart lives to serve. Give it purpose — fill it with groceries, clothing, household supplies, electronics, and more.</p>
+            <p class="small_text">Continue shopping on the <a class="small_link" href="index.php">Amazon.com homepage</a>, learn about today's deals, or visit your Wish List.</p>
+        </div>
         <?php
             } else {
                 // Display the cart content

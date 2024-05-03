@@ -139,14 +139,43 @@
 .price {
     text-align: right;
     font-size: 14px;
-}
+}   
 .textbox_center {
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2px;
+    margin-right: 35%;
+    width: 80%;
+    background-color: white;
+    padding-left: 10px;
   }
-  .center {
+.text_center {
     text-align: center;
-    border: 3px solid green;
+    padding: 5%;
   }
+.main-background-dark {
+    background-color: #EAEDED!important;
+}
+
+.page-container {
+    min-width: 998px;
+    padding: 14px 18px 18px;
+    margin: 0 auto;
+}
+.small_text {
+    text-align: left;
+    font-weight: 400;
+    text-overflow: clip;
+    font-size: 14px;
+    margin-top: 10px;
+    color: black;
+}
+.small_link {
+    text-decoration-line: underline;
+    font-weight: 600;
+    text-align: left;
+    text-overflow: clip;
+    font-size: 14px;
+    margin-top: 10px;
+    color: rgb(50, 144, 181);
+}

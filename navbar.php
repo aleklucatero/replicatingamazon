@@ -1,14 +1,6 @@
 <?php
 session_start();
 
-// Function to destroy the session and redirect to index.php
-// function logout() {
-//     session_unset();
-//     session_destroy();
-//     header("Location: index.php");
-//     exit;
-// }
-
 // Check if the user is logged in
 $logged_in = isset($_SESSION['username']);
 
