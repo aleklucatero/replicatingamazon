@@ -35,7 +35,8 @@
 
         <?php
             // Check if there are orders available
-            $orders_available = false; // Set to true if there are orders available, otherwise false
+            // Set to true if there are orders available, otherwise false
+            $orders_available = false;
             if ($orders_available) {
                 // Display orders
         ?>

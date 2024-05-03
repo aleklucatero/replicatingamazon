@@ -71,7 +71,7 @@
                 <?php
                 foreach($cart_items as $item) { ?>
                     <div class="product-cart-item">
-                        <img src="<?php echo $item['image_link']; ?>" width="180px" alt="">
+                        <img src="https://m.media-amazon.com/images/I/7120GgUKj3L._AC_SL1500_.jpg" width="180px" alt="">
                         <div>
                             <div class="product-cart-titleprice">
                                 <p><?php echo $item['description']; ?></p>
@@ -117,7 +117,11 @@
                 <p>&#x2705</p>
                 <p>Your order qualifies for FREE Shipping. <br> Choose this option at checkout. <br> See details</p>
             </div>
-            <p class="cart-subtotal">Subtotal (2 items):<b> $1,249.99</b></p>
+            <p class="cart-subtotal">Subtotal (<?php echo count($cart_items); ?> items):
+                <b>
+                    <?php echo number_format($total_price, 2); ?>
+                </b>
+            </p>
             <p class="cart-right-gift"><input type="checkbox"> This order contains a gift</p>
             <button>Proceed to checkout</button>
         </div>

@@ -1,9 +1,8 @@
 <?php
-require_once 'connect.php';
 session_start();
-
+require_once 'connect.php';
 // Check if user is logged in
-if (!isset($_SESSION['user_id'])) {
+if (isset($_SESSION['user_id'])) {
     echo "You must be logged in to place an order.";
     exit;
 }
@@ -11,7 +10,7 @@ if (!isset($_SESSION['user_id'])) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['buy_now'])) {
     $product_id = $_POST['product_id'];
     $quantity = (int)$_POST['quantity'];
-    $user_id = $_SESSION['user_id']; // Retrieve user ID from session
+    $user_id = $_SESSION["id"]; // Retrieve user ID from session
 
     // Prepare to fetch product details
     $stmt = $conn->prepare("SELECT price, stock_quantity FROM products WHERE product_id = ?");
@@ -33,9 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['buy_now'])) {
             $order_id = $orderStmt->insert_id;
 
             // Insert order details
-            $detailStmt = $conn->prepare("INSERT INTO order_details (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)");
-            $detailStmt->bind_param("iiid", $order_id, $product_id, $quantity, $product['price']);
-            $detailStmt->execute();
+            // $detailStmt = $conn->prepare("INSERT INTO order_details (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)");
+            // $detailStmt->bind_param("iiid", $order_id, $product_id, $quantity, $product['price']);
+            // $detailStmt->execute();
 
             // Update stock
             $newStock = $product['stock_quantity'] - $quantity;
