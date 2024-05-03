@@ -88,7 +88,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                         <input type="hidden" name="price" value="<?php echo htmlspecialchars($product['price']); ?>">
                         <button class="btn" name="addto_cart">Add to Cart</button>
                         </select>
-                        
+                    </form>    
                     
                     <form action="crud/process_order.php" method="post">
                         <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product['product_id']); ?>">
