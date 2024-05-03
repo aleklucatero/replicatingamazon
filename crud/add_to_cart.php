@@ -3,7 +3,7 @@ require_once 'connect.php';
 session_start();
 
 // Check if user is logged in
-if (!isset($_SESSION['user_id'])) {
+if (isset($_SESSION['user_id'])) {
     echo "<script type='text/javascript'>
         alert('User must be logged in to place an order');
         window.location.href = 'index.php';
@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['buy_now'])) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['addto_cart'])) {
     $product_id = $_POST['product_id'];
     $quantity = (int)$_POST['quantity'];
     $user_id = $_SESSION['user_id']; // Retrieve user ID from session
